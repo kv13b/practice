@@ -1,0 +1,80 @@
+.square {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(99, 93, 159);
+  padding: 8px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #5c697e;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.title {
+  color: rgba(224, 21, 119, 0);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  margin-top: 1rem;
+  background-color: #4f8c00;
+}
+
+.submit:hover {
+  border-color: #d6d8fa;
+}
+.heading {
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.file {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 70px, 10px, 7px, 8px;
+}
+
+img {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.imgdata {
+  margin-top: 30px;
+}
+
+.imgcol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.uploaded-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
