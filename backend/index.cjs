@@ -3,6 +3,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
+const email = require("./routes/email.cjs");
 
 const app = express();
 
@@ -11,6 +12,7 @@ const corsOptions = {
   methods: "GET,POST", // Allow only these methods
   allowedHeaders: ["Content-Type", "Authorization"], // Allow only these headers
 };
+app.use(express.json());
 app.use(cors(corsOptions));
 
 const storage = multer.diskStorage({
@@ -77,4 +79,5 @@ app.post("/uploads", (req, res) => {
   });
 });
 
+app.use("/email", email);
 app.listen(3000, () => console.log("server started on port 3000"));

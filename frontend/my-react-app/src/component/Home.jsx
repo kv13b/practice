@@ -4,9 +4,14 @@ const Home = () => {
   return (
     <div>
       <div className="square">
-        <p className="title">
+        <h2 className="title">
           <Link to="file">File Upload </Link>
-        </p>
+        </h2>
+      </div>
+      <div className="square">
+        <h2 className="title">
+          <Link to="mail">Send Mail </Link>
+        </h2>
       </div>
     </div>
   );
