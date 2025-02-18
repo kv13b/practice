@@ -6,10 +6,13 @@
   padding: 8px;
   margin-left: 20px;
   border-radius: 10px;
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
 body {
-  background-color: #5c697e;
+  background-color: #5d7596;
   color: white;
   padding: 40px;
   font-family: Arial;
@@ -17,7 +20,9 @@ body {
 }
 
 .title {
-  color: rgba(224, 21, 119, 0);
+  color: rgba(106, 163, 36, 0);
+  flex-direction: row;
+  padding: 50px 50px;
 }
 
 .input-group {
@@ -77,4 +82,45 @@ img {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.App {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #3e7fc1;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  color: #000000;
+  margin-bottom: 15px;
+}
+.formdata {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.labeldata {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #120505;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #d0d0d0;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+button:hover {
+  background: #25476c;
 }
