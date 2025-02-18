@@ -22,4 +22,7 @@ This repository contains practice implementations of various Node.js and React.j
 1. Uses Multer middleware to handle file uploads in Node.js.
 2. React.js fetches the uploaded data using Axios.
 3. Using CORS middleware to allow requests from different origins.
+# 2]📧 Send Emails Using Nodemailer & React (Axios)
+1. Send emails via **Nodemailer**  
+2. Connect React frontend with Node.js using **Axios**  
 
