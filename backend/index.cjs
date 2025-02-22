@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
 const email = require("./routes/email.cjs");
+const connectDB = require("./todo/connectDB.cjs");
+const todo = require("./todo/route.cjs");
 
 const app = express();
 
@@ -23,13 +25,6 @@ const storage = multer.diskStorage({
   },
 });
 
-// const upload = multer({
-//   storage: storage,
-//   limits: { fileSize: 900000 },
-//   fileFilter: function (req, file, cb) {
-//     checkfileType(file, cb);
-//   },
-// });
 const uploadpath = path.join(__dirname, "uploads");
 app.use("/uploads", express.static(uploadpath));
 
@@ -80,4 +75,6 @@ app.post("/uploads", (req, res) => {
 });
 
 app.use("/email", email);
+app.use("/todo", todo);
+connectDB();
 app.listen(3000, () => console.log("server started on port 3000"));
