@@ -25,4 +25,9 @@ This repository contains practice implementations of various Node.js and React.j
 # 2]📧 Send Emails Using Nodemailer & React (Axios)
 1. Send emails via **Nodemailer**  
 2. Connect React frontend with Node.js using **Axios**  
+Todo List using React.js, MongoDB, and Express
 
+# 3]Full-stack Todo List application:
+1. Frontend: Built with React.js to create, read tasks.
+2. Backend: Uses Express and MongoDB to manage tasks.
+3. Demonstrates CRUD operations and Axios integration for API calls.
