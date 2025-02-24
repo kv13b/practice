@@ -1,6 +1,8 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import axiosinstance from "../utils/axiosinstance";
+import { Trash2 } from "lucide-react";
+
 const Todo = () => {
   const [task, setTask] = useState("");
   const [selectValue, setSelectValue] = useState("Pending");
@@ -31,6 +33,7 @@ const Todo = () => {
         console.log("Data saved successfully:", response.data);
         setTask("");
         setSelectValue("Pending");
+        getTodo();
       }
     } catch (Error) {
       console.log(Error);
@@ -42,6 +45,18 @@ const Todo = () => {
       if (response) {
         settodoList(response.data);
         console.log(todoList);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleDelete = async (id) => {
+    try {
+      const response = await axiosinstance.delete("todo/delete-task/" + id);
+      if (response) {
+        console.log(response.data);
+        alert("task deleted");
+        getTodo();
       }
     } catch (error) {
       console.log(error);
@@ -88,6 +103,10 @@ const Todo = () => {
                 >
                   {todo.status}
                 </div>
+                <Trash2
+                  className="delete-icon"
+                  onClick={() => handleDelete(todo._id)}
+                />
               </div>
             ))}
           </div>

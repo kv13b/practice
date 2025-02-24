@@ -240,3 +240,12 @@ button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: auto;
 }
+.delete-icon {
+  cursor: pointer;
+  color: red;
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}

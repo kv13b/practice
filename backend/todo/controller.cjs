@@ -42,3 +42,13 @@ exports.del = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+exports.update = async (req, res) => {
+  try {
+    const todo = await userDB.findByIdandUpdate(req.params.id);
+    if (!todo) return res.status(404).json({ message: "Todo not found" });
+    res.json({ message: "Todo updated" });
+  } catch (error) {
+    console.log(error);
+  }
+};
