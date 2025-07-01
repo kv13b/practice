@@ -13,8 +13,8 @@
 }
 
 body {
-  background-color: #181b50;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 40px;
   font-family: Arial;
   text-align: center;
@@ -31,6 +31,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 1rem;
+}
+.mode-container {
+  padding: 10px;
 }
 
 .submit {
@@ -248,4 +251,14 @@ button:hover {
 
 .delete-icon:hover {
   color: darkred;
+}
+
+[data-theme="light"] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
 }
